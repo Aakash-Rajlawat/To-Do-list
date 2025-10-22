@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
-const express = require('express')
 
 // creating a mongoose schema , like columns in sequal
 
 const toDoListSchema = new mongoose.Schema ({
     work : {
-        type : string ,
+        type : String ,
         required : true,
     },
     completion : {
@@ -13,14 +12,14 @@ const toDoListSchema = new mongoose.Schema ({
         default : false
     },
     description : {
-        type : string ,
+        type : String ,
         default : ''
     },
     timeCreated : {
         type : Date ,
         default : Date.now ,
     },
-    Deadline : {
+    deadline : {
         type : Date,
         required : true,
     }
@@ -28,6 +27,6 @@ const toDoListSchema = new mongoose.Schema ({
 
 //now model meaning collection
 
-toDo = mongoose.model('toDo' , toDoListSchema);
+const ToDo = mongoose.model('toDo' , toDoListSchema);
 
-module.exports = toDo;
+module.exports = ToDo;

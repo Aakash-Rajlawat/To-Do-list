@@ -4,9 +4,15 @@ const PORT = 8001;
 const connectionToMongoDb = require('./connect')
 const Router = require('./routes/routes')
 
+
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));  
+
 app.use('/',Router);
 
+
 connectionToMongoDb();
+
 
 app.listen(PORT,()=>{
     console.log(`The server is successfully running on port ${PORT}`);
