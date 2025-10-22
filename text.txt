@@ -1,0 +1,21 @@
+lekhxu
+
+routes.js
+
+--------------------GET ROUTE-------------------------
+
+/ : Homepage (Show all todos)
+/Completed : (Show Completed todos)
+/inCompleted : (Show inCompleted todos)
+/:toDoId : (Shows respective todos)
+---------------------POST ROUTE------------------------
+
+/ : POST (Create a new todo)
+
+-------------------PUT ROUTE----------------------------
+
+/:toDoId (Update the todo)
+
+-------------------DELETE ROUTE-----------------------
+
+/:toDoId (Delete the todo)
